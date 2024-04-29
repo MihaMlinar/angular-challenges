@@ -3,8 +3,8 @@ import { Push } from './push.model';
 
 export interface Student extends Push {
   id: number;
-  firstname: string;
-  lastname: string;
+  firstName: string;
+  lastName: string;
   version: number;
 }
 
@@ -12,8 +12,8 @@ const factoryStudent = incrementalNumber();
 
 export const randStudent = (): Student => ({
   id: factoryStudent(),
-  firstname: randFirstName(),
-  lastname: randLastName(),
+  firstName: randFirstName(),
+  lastName: randLastName(),
   version: 0,
   type: 'student',
 });
